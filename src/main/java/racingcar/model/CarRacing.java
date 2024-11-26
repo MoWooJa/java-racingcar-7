@@ -6,12 +6,12 @@ import java.util.List;
 import racingcar.model.car.Cars;
 
 public class CarRacing {
-    public List<List<CarStatus>> race(Cars cars, Round round) {
-        List<List<CarStatus>> raceResult = new ArrayList<>();
+    public List<RaceStatus> race(Cars cars, Round round) {
+        List<RaceStatus> raceResult = new ArrayList<>();
         while (round.isDone()) {
             cars.moveCars();
             round.oneRoundDone();
-            raceResult.add(cars.getCarsStatus());
+            raceResult.add(cars.getRaceStatus());
         }
         return Collections.unmodifiableList(raceResult);
     }

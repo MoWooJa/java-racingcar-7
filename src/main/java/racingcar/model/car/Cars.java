@@ -2,6 +2,7 @@ package racingcar.model.car;
 
 import java.util.List;
 import racingcar.model.CarStatus;
+import racingcar.model.RaceStatus;
 import racingcar.model.RandomNumberGenerator;
 
 public class Cars {
@@ -33,7 +34,8 @@ public class Cars {
         car.move(RandomNumberGenerator.generateRandomNumber());
     }
 
-    public List<CarStatus> getCarsStatus() {
-        return cars.stream().map(Car::getStatus).toList();
+    public RaceStatus getRaceStatus() {
+        List<CarStatus> carsStatus = cars.stream().map(Car::getStatus).toList();
+        return new RaceStatus(carsStatus);
     }
 }
