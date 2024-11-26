@@ -10,6 +10,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import racingcar.exception.ExceptionType;
 import racingcar.exception.InputException;
+import racingcar.model.parser.InputCarNamesParser;
 
 class InputCarNamesParserTest {
 
