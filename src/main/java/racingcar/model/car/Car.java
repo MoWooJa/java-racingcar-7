@@ -1,8 +1,11 @@
 package racingcar.model.car;
 
+import racingcar.model.RaceStatus;
+
 public class Car {
 
     public static final int MOVEABLE = 4;
+    public static final String SEPARATOR = ",";
 
     private final String name;
     private int position;
@@ -16,5 +19,9 @@ public class Car {
         if (randomNumber >= MOVEABLE) {
             position++;
         }
+    }
+
+    public RaceStatus getStatus() {
+        return new RaceStatus(name, position);
     }
 }
