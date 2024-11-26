@@ -1,4 +1,4 @@
-package racingcar.model.parser;
+package racingcar.model.domain.parser;
 
 import java.util.Arrays;
 import java.util.List;

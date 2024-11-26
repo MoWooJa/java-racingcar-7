@@ -1,8 +1,8 @@
-package racingcar.model.parser;
+package racingcar.model.domain.parser;
 
 import racingcar.exception.ExceptionType;
 import racingcar.exception.InputException;
-import racingcar.model.Round;
+import racingcar.model.domain.Round;
 
 public class InputRoundParser {
 

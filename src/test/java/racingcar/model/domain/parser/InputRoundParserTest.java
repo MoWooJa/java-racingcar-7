@@ -1,4 +1,4 @@
-package racingcar.model.parser;
+package racingcar.model.domain.parser;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatCode;

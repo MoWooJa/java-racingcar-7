@@ -1,6 +1,6 @@
-package racingcar.model.car;
+package racingcar.model.domain.car;
 
-import racingcar.model.CarStatus;
+import racingcar.dto.CarStatus;
 
 public class Car {
 

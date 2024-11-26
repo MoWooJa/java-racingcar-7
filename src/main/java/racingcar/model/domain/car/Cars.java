@@ -1,9 +1,9 @@
-package racingcar.model.car;
+package racingcar.model.domain.car;
 
 import java.util.List;
-import racingcar.model.CarStatus;
-import racingcar.model.RaceStatus;
-import racingcar.model.RandomNumberGenerator;
+import racingcar.dto.CarStatus;
+import racingcar.model.domain.RaceStatus;
+import racingcar.util.RandomNumberGenerator;
 
 public class Cars {
 

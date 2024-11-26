@@ -1,7 +1,7 @@
 package racingcar.view.outputview;
 
 import java.util.List;
-import racingcar.model.RaceStatus;
+import racingcar.model.domain.RaceStatus;
 
 public class RoundView implements OutputView {
 
@@ -17,9 +17,9 @@ public class RoundView implements OutputView {
     @Override
     public void display(List<?> racingResult) {
         System.out.println(RESULT_MESSAGE);
+        System.out.println();
         for (RaceStatus raceStatus : (List<RaceStatus>) racingResult) {
             showRound(raceStatus.getRoundResult());
-            System.out.println();
         }
     }
 }

@@ -1,4 +1,4 @@
-package racingcar.model;
+package racingcar.model.domain.parser;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatCode;
@@ -10,7 +10,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import racingcar.exception.ExceptionType;
 import racingcar.exception.InputException;
-import racingcar.model.parser.InputCarNamesParser;
 
 class InputCarNamesParserTest {
 
