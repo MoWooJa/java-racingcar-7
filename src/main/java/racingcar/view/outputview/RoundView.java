@@ -1,4 +1,4 @@
-package racingcar.view;
+package racingcar.view.outputview;
 
 import java.util.List;
 
@@ -8,12 +8,8 @@ public class RoundView implements OutputView {
 
     private final List<String> roundResult;
 
-    private RoundView(List<String> roundResult) {
+    public RoundView(List<String> roundResult) {
         this.roundResult = roundResult;
-    }
-
-    public static RoundView of(List<String> roundResult) {
-        return new RoundView(roundResult);
     }
 
     private void showRound() {
