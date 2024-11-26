@@ -28,11 +28,11 @@ class InputCarNamesParserTest {
                 Arguments.of("12,준팍,도밥,고니,수아,,",
                         InputException.INVALID_INPUT + ExceptionType.NAME_LENGTH_EXCEPTION.getAnnounce()),
                 Arguments.of("12,준팍,도밥,고니,수아,&ab,",
-                        InputException.INVALID_INPUT + ExceptionType.INVALID_CHAR_EXCEPTION.getAnnounce()),
+                        InputException.INVALID_INPUT + ExceptionType.INVALID_CAR_NAMES_CHAR_EXCEPTION.getAnnounce()),
                 Arguments.of("12,준팍,도밥,고니,수아,  ,",
-                        InputException.INVALID_INPUT + ExceptionType.INVALID_CHAR_EXCEPTION.getAnnounce()),
+                        InputException.INVALID_INPUT + ExceptionType.INVALID_CAR_NAMES_CHAR_EXCEPTION.getAnnounce()),
                 Arguments.of("12,준팍,도밥,고니,수아,ㄱㄴ,",
-                        InputException.INVALID_INPUT + ExceptionType.INVALID_CHAR_EXCEPTION.getAnnounce())
+                        InputException.INVALID_INPUT + ExceptionType.INVALID_CAR_NAMES_CHAR_EXCEPTION.getAnnounce())
         );
     }
 

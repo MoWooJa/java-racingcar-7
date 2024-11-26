@@ -42,7 +42,7 @@ public class InputCarNamesParser {
         Pattern pattern = Pattern.compile(VALID_INPUT_REGEX);
         Matcher matcher = pattern.matcher(input);
         if (matcher.find()) {
-            throw new InputException(ExceptionType.INVALID_CHAR_EXCEPTION.getAnnounce());
+            throw new InputException(ExceptionType.INVALID_CAR_NAMES_CHAR_EXCEPTION.getAnnounce());
         }
     }
 
