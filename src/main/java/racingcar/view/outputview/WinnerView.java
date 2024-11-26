@@ -8,25 +8,19 @@ public class WinnerView implements OutputView {
     public static final int ONLY_ONE_WINNER = 1;
     public static final String SEPARATOR = ", ";
 
-    private final List<String> winners;
-
-    public WinnerView(List<String> winners) {
-        this.winners = winners;
-    }
-
-    private String formatWinners() {
-        if (onlyOnewWinner()) {
+    private String formatWinners(List<String> winners) {
+        if (onlyOnewWinner(winners)) {
             return winners.getFirst();
         }
         return String.join(SEPARATOR, winners);
     }
 
-    private boolean onlyOnewWinner() {
+    private boolean onlyOnewWinner(List<String> winners) {
         return winners.size() == ONLY_ONE_WINNER;
     }
 
     @Override
-    public void display() {
-        System.out.println(String.format(WINNER_MESSAGE_FORMAT, formatWinners()));
+    public void display(List<?> winners) {
+        System.out.println(String.format(WINNER_MESSAGE_FORMAT, formatWinners((List<String>) winners)));
     }
 }

@@ -1,18 +1,13 @@
 package racingcar.view.outputview;
 
 import java.util.List;
+import racingcar.model.RaceStatus;
 
 public class RoundView implements OutputView {
 
     private static final String RESULT_MESSAGE = "실행 결과";
 
-    private final List<String> roundResult;
-
-    public RoundView(List<String> roundResult) {
-        this.roundResult = roundResult;
-    }
-
-    private void showRound() {
+    private void showRound(List<String> roundResult) {
         for (String result : roundResult) {
             System.out.println(result);
         }
@@ -20,8 +15,11 @@ public class RoundView implements OutputView {
     }
 
     @Override
-    public void display() {
+    public void display(List<?> racingResult) {
         System.out.println(RESULT_MESSAGE);
-        showRound();
+        for (RaceStatus raceStatus : (List<RaceStatus>) racingResult) {
+            showRound(raceStatus.getRoundResult());
+            System.out.println();
+        }
     }
 }

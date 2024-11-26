@@ -1,7 +1,5 @@
 package racingcar.view.outputview;
 
-import java.util.List;
-
 public class OutputViewFactory {
 
     public static final String TYPE_ERROR_MESSAGE = "잘못된 출력 뷰 타입을 입력하셨습니다.";
@@ -9,12 +7,12 @@ public class OutputViewFactory {
     private OutputViewFactory() {
     }
 
-    public OutputView createOutputViewOf(OutPutViewType outPutViewType, List<String> resultForDisplay) {
+    public static OutputView createOutputViewOf(OutPutViewType outPutViewType) {
         if (outPutViewType == OutPutViewType.ROUND) {
-            return new RoundView(resultForDisplay);
+            return new RoundView();
         }
         if (outPutViewType == OutPutViewType.WINNER) {
-            return new WinnerView(resultForDisplay);
+            return new WinnerView();
         }
         throw new RuntimeException(TYPE_ERROR_MESSAGE);
     }
