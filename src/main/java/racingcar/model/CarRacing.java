@@ -6,8 +6,8 @@ import java.util.List;
 import racingcar.model.car.Cars;
 
 public class CarRacing {
-    public List<List<RaceStatus>> race(Cars cars, Round round) {
-        List<List<RaceStatus>> raceResult = new ArrayList<>();
+    public List<List<CarStatus>> race(Cars cars, Round round) {
+        List<List<CarStatus>> raceResult = new ArrayList<>();
         while (round.isDone()) {
             cars.moveCars();
             round.oneRoundDone();

@@ -1,6 +1,6 @@
 package racingcar.model.car;
 
-import racingcar.model.RaceStatus;
+import racingcar.model.CarStatus;
 
 public class Car {
 
@@ -21,7 +21,7 @@ public class Car {
         }
     }
 
-    public RaceStatus getStatus() {
-        return new RaceStatus(name, position);
+    public CarStatus getStatus() {
+        return new CarStatus(name, position);
     }
 }
